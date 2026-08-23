@@ -31,7 +31,11 @@ export default function RootLayout({
       )}
     >
       <body>
-        <ClerkProvider appearance={{ theme: shadcn }} afterSignOutUrl="/sign-in">
+        <ClerkProvider
+          appearance={{ theme: shadcn }}
+          afterSignOutUrl="/sign-in"
+          taskUrls={{ "choose-organization": "/choose-organization" }}
+        >
           <ThemeProvider>
             {children}
             <Toaster />

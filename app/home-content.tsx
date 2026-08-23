@@ -1,6 +1,6 @@
 "use client"
 
-import { UserButton } from "@clerk/nextjs"
+import { OrganizationSwitcher, UserButton } from "@clerk/nextjs"
 import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
@@ -8,8 +8,9 @@ import { Button } from "@/components/ui/button"
 export function HomeContent() {
   return (
     <div className="flex min-h-svh flex-col">
-      <header className="flex items-center justify-end gap-2 border-b p-4">
+      <header className="flex flex-col items-end gap-2 border-b p-4">
         <UserButton />
+        <OrganizationSwitcher />
       </header>
       <div className="flex p-6">
         <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
